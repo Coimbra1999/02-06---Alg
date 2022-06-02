@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 2 - lista 7 (Op. ternário)</title>
+</head>
+<body>
+    Informe o saldo da conta e o valor do débito:<br>
+
+    <input id="saldo" type="number" placeholder="saldo" autofocus>
+    <input id="debito" type="number" placeholder="débito"><br><br>
+
+    <button onclick="analisar()">Analisar conta</button><br>
+
+    <span id="smg" style="color: blue"><i></i></span>
+    <span id="smg2" style="color: red" ><b></b></span>
+</body>
+</html>
+<script>
+    function analisar() {
+        var ax_saldo = Number(saldo.value);
+        var ax_debito = Number(debito.value);
+        var novo_saldo = ax_saldo - ax_debito;
+        smg.innerHTML = '';
+
+        novo_saldo >= 0?
+        smg.innerHTML = `O saldo atual da conta corrente é ${novo_saldo}`:
+        smg2.innerHTML = `O saldo atual da conta corrente é ${novo_saldo}`;
+    }
+</script>

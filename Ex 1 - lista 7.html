@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1 - lista 7 (Op. ternário)</title>
+</head>
+<body>
+    <h1>Auto-escola</h1>
+
+    Informe o nome e a idade do aluno:<br>
+
+    <input id="nome" type="text" autofocus placeholder="Nome">
+    <input id="idade" type="Number" placeholder="idade"><br><br>
+
+    <button onclick="avaliar()">Avaliar aluno</button><br>
+
+    <span id="msg"></span>
+</body>
+</html>
+<script>
+    function avaliar() {
+        var ax_idade = Number(idade.value);
+        var ax_nome = nome.value;
+        msg.innerHTML = '';
+
+        ax_idade >= 18 ?
+        msg.innerHTML = `${ax_nome}, vamos tirar a CNH?`:
+        msg.innerHTML = `${ax_nome}, vai jogar PlayStation!`;      
+    } 
+</script>

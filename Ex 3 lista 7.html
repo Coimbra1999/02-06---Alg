@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3 - lista 7 (Op. ternário)</title>
+</head>
+<body>
+    <h1>Mercado Bom Doce</h1>
+
+    Informe a quantidade de chocolates comprados:
+    <input id="qtd" type="number" autofocus><br><br>
+
+    <button onclick="compra()">Compra</button><br>
+
+    <span id="msg"></span>
+</body>
+</html>
+<script>
+    function compra() {
+        var ax_qtd = Number(qtd.value);
+
+        ax_qtd > 12?
+        msg.innerHTML = `o valor da sua compra foi de ${(ax_qtd*2.50).toFixed(2)} reais`:
+        msg.innerHTML = `o valor da sua compra foi de ${(ax_qtd*3).toFixed(2)} reais`;
+    }
+</script>
